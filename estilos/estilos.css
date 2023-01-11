@@ -1,0 +1,33 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*.card {
+    background-color: blueviolet;
+    padding: 1rem;
+}*/
+
+.titulo_apartado {
+    font-style: italic;
+    font-weight: bold;
+    margin: 1rem 1px;
+    padding: 1rem 0.5rem;
+    background-color: blue;
+}
+
+.titulo {
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+.periodo {
+    color: green;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    font-style: normal;
+    color: violet
+}
