@@ -1,33 +1,111 @@
 * {
     font-family: 'Ubuntu', sans-serif;
+    /*background-color: #d9d9e2;*/
+    /*color: #05192d;*/
 }
 
-/*.card {
-    background-color: blueviolet;
-    padding: 1rem;
-}*/
+body {
+    background-color: #d9d9e2;
+    color: #d9d9e2;
+}
+
+#mensaje {
+    background-color: red;
+    display: inline-block;
+    padding: 50px;
+    position: fixed ;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+.navbar  {
+    background-color: #05192d;
+    color: #d9d9e2;
+    border-bottom: 0.1rem solid #f7f3eb;
+}
+
+.nav {
+    color: #03ef62;
+}
+
+#inicio, #info_personal {
+    background-color: #05192d;
+}
+
+.img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+    background-color: #03ef62;
+    border-radius: 0.5rem;
+}
+
+#Nombre {
+    color: #f7f3eb;
+}
+
+#Profesion {
+    color: #03ef62;
+}
+
+.bi {
+    font-size: 1.5rem;
+    color:#03ef62;
+}
+
+.bi-phone {
+    vertical-align: middle;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.texto_icono {
+    margin: 1rem;
+}
 
 .titulo_apartado {
-    font-style: italic;
     font-weight: bold;
     margin: 1rem 1px;
     padding: 1rem 0.5rem;
-    background-color: blue;
+    padding-left: 2.5rem;
+    background-color: #05192d;
+    color: #f7f3eb;
+    border-radius: 1rem;
 }
 
 .titulo {
     font-style: italic;
     font-weight: bold;
-    color: red;
+    color: black;
+    background-color: #7933ff;
 }
 
 .periodo {
-    color: green;
+    color: #03ef62;
     font-style: italic;
     margin-bottom: 8px;
 }
 
 .descripcion {
     font-style: normal;
-    color: violet
+    color: #05192d;
+}
+
+.footer {
+    background-color: #05192d;
+    color: #03ef62;
+    margin-top: 1rem;
+    padding: 1rem;
 }

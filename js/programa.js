@@ -14,6 +14,8 @@ fetch(url)
     }
   })
 
+/*document.getElementById("Contacto").addEventListener("onclick")*/
+
 /*Reemplaza la indicación genérica de información personal por los valores reales*/
 function carga_info(obj) {
   for (var key in obj) {
