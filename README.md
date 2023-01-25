@@ -2,9 +2,11 @@
 
 Este repositorio es una entrega final del curso "Primeros pasos del desarrollo front end" dictado por Ticmas Academy, cuyo propósito es
 demostrar los conocimientos adquiridos durante el curso.
-La consigna es crear una landing page que sea el Curriculum Vitae del alumno. Sabiendo esto:
+La consigna es crear una **landing page que sea el Curriculum Vitae** del alumno. Sabiendo esto:
 
-El repositorio es una plantilla de Curriculum Vitae (CV) que cuenta con los apartados:
+**Para acceder a la página del proyecto por favor utilizar el siguiente enlace: https://jq-proyecto-cv.netlify.app/**
+
+Es repositorio es una plantilla de Curriculum Vitae (CV) que cuenta con los apartados:
 
   - Información personal: Nombre, Profesión, Dirección, Email, Linkedin, Celular
   - Foto
@@ -24,13 +26,13 @@ Se inlcuye también un arhivo de Excel, pues la idea es:
   2) Usar el script "devolver datos de tabla como JSON" de la pestaña Automatizar
   3) Copiar el resultado y pegarlo en el archivo info.txt
 
-De esta forma se pretende facilitar la carga de información.
+**De esta forma se pretende facilitar la carga de información.**
 
 Además, el archivo CSS cuenta con un :root donde se definen los colores de la página como variables generales, así si el usuario lo desea 
 puede cambiar los colores de la plantilla con gran facilidad.
 
-Estas decisiones se tomaron con el objetivo de lograr que la plantilla sea facilmente adaptable a nuevos usuarios si quieren cargar sus datos y 
-darle su formato de colores preferencial.
+**Estas decisiones se tomaron con el objetivo de lograr que la plantilla sea facilmente adaptable a nuevos usuarios si quieren cargar sus datos y 
+darle su formato de colores preferencial.**
 
 Quedan cosas por mejorar como:
   - Agregar la opción para cambiar entre tema claro y oscuro.
