@@ -1,3 +1,4 @@
+/* Variables globales */
 const url = "https://raw.githubusercontent.com/juampiquijano/Proyecto_CV/master/info.txt";
 var botonContacto = document.getElementById("boton-contacto");
 var botonCerrar = document.getElementById("boton-cerrar");
@@ -35,33 +36,38 @@ botonCerrar.addEventListener("click", () => {
 
 /* Capturar datos del formulario */
 function capturarDatos () {
+  var nombre_input = document.getElementById("nombre");
+  var nombre = nombre_input.value;
   var correo_input = document.getElementById("correo");
-  var correo= correo_input.value;
+  var correo = correo_input.value;
   var mensaje_input = document.getElementById("contenido-mensaje");
   var mensaje = mensaje_input.value;
-  if ( correo == "" ) {
-    alert("El correo es obligatorio");
-    correo_input.focus();
+  if ( nombre == "" ) {
+    alert("El nombre es obligatorio");
+    nombre_input.focus();
   } else {
-    if ( !( correo.includes("@") ) ) {
-      alert("Por favor, ingrese una dirección de correo válida. El correo debe contener el signo @");
+    if ( correo == "" ) {
+      alert("El correo es obligatorio");
       correo_input.focus();
     } else {
-      if ( mensaje.length <= 10 ) {
-        alert("Escriba un mensaje de al menos 10 caractéres")
-        mensaje_input.focus();
+      if ( !( correo.includes("@") ) ) {
+        alert("Por favor, ingrese una dirección de correo válida. El correo debe contener el signo @");
+        correo_input.focus();
       } else {
-        correo_input.value = ""
-        mensaje_input.value = ""
-        console.log(correo);
-        console.log(mensaje);
-        return [correo, mensaje]
+        if ( mensaje.length <= 10 ) {
+          alert("Escriba un mensaje de al menos 10 caractéres")
+          mensaje_input.focus();
+        } else { /* Enviar correo/notificación */
+          var form = document.getElementById("form-contacto");
+          form.submit();
+          /*  Aviso de prueba. En servicio avisa Netlify
+          alert("EL MENSAJE HA SIDO ENVIADO CORRECTAMENTE");*/
+
+        } 
       } 
     } 
-  } 
+  }
 }
-
-/* Enviar correo */
 
 /*Reemplaza la indicación genérica de información personal por los valores reales*/
 function carga_info(obj) {
@@ -109,6 +115,7 @@ function crear_capacidades(lista_cap) {
 }
 
 /* Animación de flechas de colapsables */
+/* No me salió hacerlo más compacto, intenté con un ciclo for  */
 let flechas = {"f1": 0, "f2": 0, "f3": 0, "f4": 0, "f5": 0};
 let keys = Object.keys(flechas);
 
