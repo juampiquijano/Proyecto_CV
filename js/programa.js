@@ -60,9 +60,9 @@ function capturarDatos () {
         } else { /* Enviar correo/notificación */
           var form = document.getElementById("form-contacto");
           cuadroMensaje.style.display = "none";          
-          nombre_input = "";
-          correo_input = "";
-          mensaje_input = "";
+          nombre = "";
+          correo = "";
+          mensaje = "";
           form.submit();
         } 
       } 
