@@ -24,6 +24,9 @@ De esta forma se pretende facilitar la carga de información.
 Además, el archivo CSS cuenta con un :root donde se definen los colores de la página como variables generales, así si el usuario lo desea 
 puede cambiar los colores de la plantilla con gran facilidad.
 
+Estas decisiones se tomaron con el objetivo de lograr que la plantilla sea facilmente adaptable a nuevos usuarios si quieren cargar sus datos y 
+darle su formato de colores preferencial.
+
 Quedan cosas por mejorar como:
   - Agregar la opción para cambiar entre tema claro y oscuro.
   - Mejorar la distribucción de las cards.
