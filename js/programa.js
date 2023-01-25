@@ -2,7 +2,7 @@
 const url = "https://raw.githubusercontent.com/juampiquijano/Proyecto_CV/master/info.txt";
 var botonContacto = document.getElementById("boton-contacto");
 var botonCerrar = document.getElementById("boton-cerrar");
-var mensaje = document.getElementById("cuadro-mensaje");
+var cuadroMensaje = document.getElementById("cuadro-mensaje");
 
 
 /* Pido la información al servidor */
@@ -26,12 +26,12 @@ fetch(url)
 
 /* Abre la solapa de mensaje*/
 botonContacto.addEventListener("click", () => {
-  mensaje.style.display = "inline-block";
+  cuadroMensaje.style.display = "inline-block";
 });
 
 /* Cierra la solapa de mensaje*/
 botonCerrar.addEventListener("click", () => {
-  mensaje.style.display = "none";
+  cuadroMensaje.style.display = "none";
 });
 
 /* Capturar datos del formulario */
@@ -55,14 +55,15 @@ function capturarDatos () {
         correo_input.focus();
       } else {
         if ( mensaje.length <= 10 ) {
-          alert("Escriba un mensaje de al menos 10 caractéres")
+          alert("Escriba un mensaje de al menos 10 caractéres");
           mensaje_input.focus();
         } else { /* Enviar correo/notificación */
           var form = document.getElementById("form-contacto");
           form.submit();
-          /*  Aviso de prueba. En servicio avisa Netlify
-          alert("EL MENSAJE HA SIDO ENVIADO CORRECTAMENTE");*/
-
+          cuadroMensaje.style.display = "none";          
+          nombre_input = "";
+          correo_input = "";
+          mensaje_input = "";
         } 
       } 
     } 
