@@ -4,7 +4,7 @@ Este repositorio es una entrega final del curso "Primeros pasos del desarrollo f
 demostrar los conocimientos adquiridos durante el curso.
 La consigna es crear una **landing page que sea el Curriculum Vitae** del alumno. Sabiendo esto:
 
-**Para acceder a la página del proyecto por favor utilizar el siguiente enlace: https://jq-proyecto-cv.netlify.app/**
+**Para acceder a la página del proyecto por favor utilizar el siguiente enlace: https://juampiquijano.github.io/Proyecto_CV/**
 
 Es repositorio es una plantilla de Curriculum Vitae (CV) que cuenta con los apartados:
 
@@ -16,7 +16,7 @@ Es repositorio es una plantilla de Curriculum Vitae (CV) que cuenta con los apar
   - Capacitaciones
   - Capacidades
 
-Y además, permite que los visitantes contacten al usuario a través de un formulario, el cual es recibido en su cuenta de Netlify y puede configurarse
+Y además, permite que los visitantes contacten al usuario a través de un formulario, el cual es recibido en su cuenta de Formspree (API) y puede configurarse
 para que también se notifique en su mail.
 
 La información (a excepción de la Foto) se extrae de un archivo de texto (info.txt), donde se encuentra en formato JSON.
