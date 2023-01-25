@@ -1,111 +1,186 @@
+/* General */
 * {
     font-family: 'Ubuntu', sans-serif;
-    /*background-color: #d9d9e2;*/
-    /*color: #05192d;*/
+}
+
+:root {
+    --negro: black;
+    --navy: #05192d;
+    --verde: #03ef62;
+    --gris-fondo: #d9d9e2;
+    --violeta: #7933ff;
+    --blanco: #f7f3eb;
 }
 
 body {
-    background-color: #d9d9e2;
-    color: #d9d9e2;
+    background-color: var(--gris-fondo);
+    color: var(--gris-fondo);
 }
 
-#mensaje {
-    background-color: red;
-    display: inline-block;
-    padding: 50px;
-    position: fixed ;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    opacity: 1;
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+/* Barra de navegación */
 .navbar  {
-    background-color: #05192d;
-    color: #d9d9e2;
-    border-bottom: 0.1rem solid #f7f3eb;
+    background-color: var(--navy);
+    color: var(--gris-fondo);
+    border-bottom: 0.1rem solid var(--blanco);
 }
 
 .nav {
-    color: #03ef62;
+    color: var(--verde);
 }
 
+/* Foto, Nombre, Profesión */
 #inicio, #info_personal {
-    background-color: #05192d;
+    background-color: var(--navy);
 }
 
 .img {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0.25rem;
-    background-color: #03ef62;
+    background-color: var(--verde);
     border-radius: 0.5rem;
 }
 
 #Nombre {
-    color: #f7f3eb;
+    color: var(--blanco);
 }
 
 #Profesion {
-    color: #03ef62;
+    color: var(--verde);
 }
 
+/* Información personal */
 .bi {
     font-size: 1.5rem;
-    color:#03ef62;
-}
-
-.bi-phone {
-    vertical-align: middle;
-}
-
-.contenedor {
-    display: flex;
-    align-items: center;
-    margin-right: 5rem;
-    margin-left: 5rem;
-}
-
-.info {
-    display: flex;
-    align-items: center;
+    color:var(--verde);
+    background-color: var(--navy);
 }
 
 .texto_icono {
     margin: 1rem;
 }
 
+/* Contenido general */
+
+.encabezado_apartado {
+    margin: 1rem -0.8rem;
+    padding: 1rem 0rem;
+    background-color: var(--navy);
+    border-radius: 1rem;
+    align-items: center;
+}
+
 .titulo_apartado {
     font-weight: bold;
-    margin: 1rem 1px;
-    padding: 1rem 0.5rem;
-    padding-left: 2.5rem;
-    background-color: #05192d;
-    color: #f7f3eb;
-    border-radius: 1rem;
+    padding-left: 2rem;
+    color: var(--blanco);
+    margin-bottom: 0rem;
+}
+
+.flecha-abajo {
+    transform: rotate(180deg);
 }
 
 .titulo {
     font-style: italic;
     font-weight: bold;
-    color: black;
-    background-color: #7933ff;
+    color: var(--negro);
+    background-color: var(--violeta);
 }
 
 .periodo {
-    color: #03ef62;
+    color: var(--verde);
     font-style: italic;
     margin-bottom: 8px;
 }
 
 .descripcion {
     font-style: normal;
-    color: #05192d;
+    color: var(--navy);
+    text-align: justify;
 }
 
+.capacidad {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    justify-content: space-around;
+}
+
+.cap {
+    background-color: var(--violeta);
+    display: inline-block;
+    padding: 0.65rem;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--blanco);
+    text-align: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    border-radius: 0.375rem;
+}
+
+.bg-violeta {
+    background-color: var(--violeta);
+}
+
+/* Pie de página */
 .footer {
-    background-color: #05192d;
-    color: #03ef62;
+    background-color: var(--navy);
+    color: var(--verde);
     margin-top: 1rem;
     padding: 1rem;
+}
+
+/* Mensaje de contacto */
+#cuadro-mensaje  {
+    background-color: var(--navy);
+    display: none;
+    position: fixed ;
+    bottom: 0;
+    right: 5px;
+    z-index: 1;
+    border-radius: 1rem;
+    border-color: var(--verde);
+    border: 0.4rem;
+    border-width: 0.4rem;
+}
+
+.mensaje {
+    color: var(--blanco);
+    border-color: var(--verde);
+    border-width: 0.5rem;
+}
+
+.mensaje_encabezado {
+    padding: 0.25rem 0.5rem;
+}
+
+.mensaje_contenido {
+    background-color: var(--gris-fondo);
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+}
+
+.form-label {
+    color: var(--navy);
+}
+
+#boton-cerrar {
+    background-color: var(--navy);
+    color: var(--blanco);
+}
+
+.boton_enviar {
+    margin: 1rem 0rem;
+    background-color: var(--navy);
 }

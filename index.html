@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pruebas Curriculum vitae</title>
+    <title>Curriculum vitae</title>
     <!--Tipografía de GoogleFonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,9 @@
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">-->
     <!--Códigos de JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/programa.js"></script>
 </head>
-
 <body>
+    <!-- Barra de navegación -->
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary navbar-dark">
         <div class="container-fluid nav">
             <div class="navbar-header">
@@ -31,20 +30,42 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link nav" href="#">Inicio</a>
                     <a class="nav-link nav" href="#trabajos">Experiencia Laboral</a>
                     <a class="nav-link nav" href="#educacion">Historial Académico</a>
                     <a class="nav-link nav" href="#idiomas">Idiomas</a>
                     <a class="nav-link nav" href="#capacitaciones">Capacitaciones</a>
+                    <a class="nav-link nav" href="#capacidades">Capacacidades</a>
                 </div>
             </div>
-            <button type="button" class="btn btn-success" id="Contacto">Contáctame</button>
+            <button type="button" class="btn btn-success" id="boton-contacto">Contáctame</button>
         </div>
     </nav>
-    <div id="mensaje">
-        Hola
+    <!-- Solapa para contactar al desarrollador -->
+    <div id="cuadro-mensaje">
+        <div class="container-fluid mensaje">
+            <div class="row align-items-center mensaje" id="mensaje_encabezado">
+                <div class="col-10 mensaje">
+                    Contáctame
+                </div>
+                <div class="col-2 mensaje_encabezado">
+                    <button type="button" class="btn" id="boton-cerrar">X</button>
+                </div>
+            </div>
+            <div class="row align-items-center mensaje_contenido">
+                <form class="form-group" action="https://formsubmit.co/juampiquijano15@gmail.com" method="POST">
+                    <label class="form-label mt-4 mensaje">Nombre</label>
+                    <input type="text" name="name" class="form-control" placeholder="Nombre Completo" required>
+                    <label class="form-label mt-4 mensaje">Dirección de correo</label>
+                    <input type="email" name="email" class="form-control mensaje_campo" id="correo" placeholder="Ingrese su correo" required>
+                    <label class="form-label mt-4">Mensaje</label>
+                    <textarea name="message" class="form-control" id="contenido-mensaje" rows="5" placeholder="¿Por qué me quiere contactar?" required></textarea>
+                    <button type="submit" class="btn btn-primary boton_enviar">Enviar</button>
+                    <!--<button type="button" class="btn btn-primary boton_enviar" onclick="capturarDatos()">Enviar</button>-->
+                </form>
+            </div>
+        </div>
     </div>
-
+    <!-- Encabezado: Foto de perfil, Nombre, Profesión e información de contacto -->
     <div class="container-fluid">
         <div class="row align-items-center" id="inicio">
             <div class="col-3 offset-sm-1">
@@ -57,42 +78,92 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center justify-content-evenly" id="info_personal">            
-            <div class="col-md-3 col-sm-6">
-                <div class="info">
+        <div class="row" id="info_personal">            
+            <div class="contenedor">
+                <div class="contenedor">
                     <div><i class="bi bi-phone"></i></div>
                     <div><p class="texto_icono" id="Celular"></p></div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="info">
+                <div class="contenedor">
                     <div><i class="bi bi-envelope-at-fill"></i></div>
-                    <div><p class="texto_icono" id="email"></p></div>
+                    <div><p class="texto_icono" id="Email"></p></div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="info">
+                <div class="contenedor">
                     <div><i class="bi bi-house-door-fill"></i></div>
                     <div><p class="texto_icono" id="Domicilio"></p></div>
                 </div>
+                <div class="contenedor">
+                    <div><i class="bi bi-linkedin"></i></div>
+                    <div><p class="texto_icono" id="Linkedin"></p></div>
+                </div>
             </div>
         </div>
+        <!-- Contenido del CV -->
         <div class="row">
-            <!--<div class="col-1"></div>-->
             <article class="col-10 container-fluid">
-                <h3 class="titulo_apartado" id="trabajos">Experiencia Laboral</h3>
-                <section class="row g-2" id="s_Trabajo"> </section>
-                <h3 class="titulo_apartado" id="educacion">Historial Académico</h3>
-                <section class="row g-2" id="s_Educacion"> </section>
-                <h3 class="titulo_apartado" id="idiomas">Idiomas</h3>
-                <section class="row g-2" id="s_Idioma"> </section>
-                <h3 class="titulo_apartado" id="capacitaciones">Capacitaciones</h3>
-                <section class="row g-2" id="s_Capacitacion"> </section>
+                <div class="row encabezado_apartado">
+                    <div class="col-10">
+                        <h3 class="titulo_apartado" id="trabajos">Experiencia Laboral</h3>
+                    </div>
+                    <div class="col-1 justify-content">
+                        <a href="#s_Trabajo" class="btn" id="f1" data-bs-toggle="collapse">
+                            <i class="bi bi-arrow-up-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="row g-2 collapse show" id="s_Trabajo"> </section>
+                <div class="row encabezado_apartado">
+                    <div class="col-10">
+                        <h3 class="titulo_apartado" id="educacion">Historial Académico</h3>
+                    </div>
+                    <div class="col-1 justify-content">
+                        <a href="#s_Educacion" class="btn" id="f2" data-bs-toggle="collapse">
+                            <i class="bi bi-arrow-up-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="row g-2 collapse show" id="s_Educacion"> </section>
+                <div class="row encabezado_apartado">
+                    <div class="col-10">
+                        <h3 class="titulo_apartado" id="idiomas">Idiomas</h3>
+                    </div>
+                    <div class="col-1 justify-content">
+                        <a href="#s_Idioma" class="btn" id="f3" data-bs-toggle="collapse">
+                            <i class="bi bi-arrow-up-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="row g-2 collapse show" id="s_Idioma"> </section>
+                <div class="row encabezado_apartado">
+                    <div class="col-10">
+                        <h3 class="titulo_apartado" id="capacitaciones">Capacitaciones</h3>
+                    </div>
+                    <div class="col-1 justify-content">
+                        <a href="#s_Capacitacion" class="btn" id="f4" data-bs-toggle="collapse">
+                            <i class="bi bi-arrow-up-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="row g-2 collapse show" id="s_Capacitacion"> </section>
+                <div class="row encabezado_apartado">
+                    <div class="col-10">
+                        <h3 class="titulo_apartado" id="capacidades">Capacidades</h3>
+                    </div>
+                    <div class="col-1 justify-content">
+                        <a href="#s_Capacidad" class="btn" id="f5" data-bs-toggle="collapse">
+                            <i class="bi bi-arrow-up-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <section class="capacidad collapse show" id="s_Capacidad"> </section>
             </article>
         </div>
     </div>
+    <!-- Pie de página -->
     <footer class="footer">
         <p class="footer">Copyright 2023</p>
     </footer>
+    <!-- Programa en JavaScript -->
+    <script src="js/programa.js"></script>
 </body>
 </html>

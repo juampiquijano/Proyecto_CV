@@ -15,7 +15,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap);
 
 :root {
-    --bs-blue: #2c3e50;
+    --bs-blue: #2c3e50; 
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #e83e8c;
@@ -2619,7 +2619,7 @@ textarea.form-control-lg {
     appearance: none;
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
-    print-color-adjust: exact
+    print-color-adjust: exact;
 }
 
 .form-check-input[type=checkbox] {
