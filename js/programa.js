@@ -59,11 +59,11 @@ function capturarDatos () {
           mensaje_input.focus();
         } else { /* Enviar correo/notificación */
           var form = document.getElementById("form-contacto");
-          form.submit();
           cuadroMensaje.style.display = "none";          
           nombre_input = "";
           correo_input = "";
           mensaje_input = "";
+          form.submit();
         } 
       } 
     } 
