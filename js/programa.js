@@ -59,9 +59,9 @@ function capturarDatos () {
           mensaje_input.focus();
         } else { /* Enviar correo/notificación */
           var form = document.getElementById("form-contacto");
-          nombre_input.value = "";
-          correo_input.value = "";
-          mensaje_input.value = "";
+          document.getElementById("nombre").value = "";
+          document.getElementById("correo").value = "";
+          document.getElementById("contenido-mensaje").value = "";
           cuadroMensaje.style.display = "none";          
           form.submit();
         } 
